@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import CurrencyConverter from "./components/CurrencyConverter";
+import AddTransaction from "./components/AddTransaction";
+import TransactionsList from "./components/TransactionsList";
+import ShowMaxTrans from "./components/ShowMaxTrans";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CurrencyConverter/>
+      <AddTransaction/>
+      <TransactionsList/>
+      <ShowMaxTrans/>
     </div>
   );
-}
+};
 
 export default App;
