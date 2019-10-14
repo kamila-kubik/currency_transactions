@@ -12,13 +12,10 @@ const getPlnValue = number => ({
     type: types.GET_PLN_VALUE, number
 });
 
-const changeTransPln = number => ({
-    type: types.CHANGE_TRANS_PLN, number
-});
-
 const addId = number => ({
     type: types.ADD_ID, number
 });
+
 
 
 
@@ -26,6 +23,6 @@ export default {
     add,
     remove,
     getPlnValue,
-    changeTransPln,
-    addId
+    addId,
+
 }

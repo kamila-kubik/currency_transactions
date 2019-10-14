@@ -23,11 +23,11 @@ const SumOfTransactions = ({transactions}) => {
     };
 
     return (
-        <div>
-            <p>Suma:
-                <span>euro: {transactions.length > 0 ? sumOfEuroTrans(transactions): "0"}, </span>
-                <span>pln: {transactions.length > 0 ? sumOfPlnTrans(transactions): "0"}</span>
-            </p>
+        <div className="trans_sum">
+            <div className="sum">Suma</div>
+            <div className="euro">{transactions.length > 0 ? sumOfEuroTrans(transactions): "0"}</div>
+            <div className="pln">{transactions.length > 0 ? sumOfPlnTrans(transactions): "0"}</div>
+            <div className="delete"/>
         </div>
     )
 

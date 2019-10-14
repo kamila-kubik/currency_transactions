@@ -1,0 +1,35 @@
+.nav_list, .trans_sum, .flex {
+    display: flex;
+
+}
+
+.flex {
+    justify-content: center;
+}
+
+.lp {
+    width: 2rem;
+    border: 1px solid black;
+
+}
+.trans_name {
+    width: 15rem;
+    border: 1px solid black;
+}
+.euro, .pln {
+    width: 7rem;
+    border: 1px solid black;
+}
+.delete {
+    width: 5rem;
+    border: 1px solid black;
+}
+
+.sum {
+    width: 17rem;
+    border: 1px solid black;
+}
+.trans_list{
+    margin-right: 2rem;
+    
+}

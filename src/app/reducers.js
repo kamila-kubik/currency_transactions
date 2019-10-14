@@ -1,9 +1,7 @@
 import types from "./types";
 
-
-
 const INITIAL_STATE = {
-    idNumber:0,
+    idNumber: 1,
     plnValue: 0,
     transactions: []
 };
@@ -12,7 +10,8 @@ const transReducer = (state=INITIAL_STATE, action) =>{
     switch (action.type) {
         case types.ADD_TRANS:
             return {
-                ...state, transactions: [...state.transactions, action.item]
+                ...state,
+                transactions: [...state.transactions, action.item]
             };
         case types.GET_PLN_VALUE:
             return {
@@ -22,10 +21,6 @@ const transReducer = (state=INITIAL_STATE, action) =>{
             return {
                 ...state, idNumber: state.idNumber + 1
             };
-        // case types.CHANGE_TRANS_PLN:
-        //     return {
-        //         ...state, transactions: [...state.transactions, action.number]
-        //     };
         case types.REMOVE_TRANS:
             return {
                 ...state, transactions: [...state.transactions.filter(item => item.id !== action.id) ]

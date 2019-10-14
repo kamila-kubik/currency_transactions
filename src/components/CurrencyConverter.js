@@ -1,40 +1,35 @@
 import React from "react";
 import {connect} from "react-redux";
 import actions from "../app/actions";
-// import store from "../store";
+import "../style/currencyConverter.css"
 
+const CurrencyConverter = ({getPlnValue, transactions, plnValue, changeTransPln}) => {
 
+    const value = React.createRef();
 
-const CurrencyConverter = ({getPlnValue}) => {
-
-    const plnValue = React.createRef();
 
     const handleChangePlnValue = (e) => {
-        // const state = store.getState();
-        getPlnValue(parseFloat(plnValue.current.value));
-        // if (state.length > 0 ){
-        //     changeTransPln({
-        //         pln: store.getState().euro * plnValue
-        //     });
-        // }
-
+        getPlnValue(parseFloat(value.current.value));
 
     };
 
     return (
-        <div>
+        <div className="converter">
             <p>Przelicznik walutowy</p>
-            <label htmlFor="">1 EURO =</label>
-            <input type="number" onChange={handleChangePlnValue} ref={plnValue} step="0.0001"/><span>PLN</span>
+            <label htmlFor="euro">1 EURO = </label>
+            <input id="euro" type="number"  placeholder="0,0000" onChange={handleChangePlnValue}  ref={value} step="0.0001"/><span> PLN</span>
         </div>
     )
 };
 
 const mapDispatchToProps = dispatch => ({
     getPlnValue: plnValue => dispatch(actions.getPlnValue(plnValue)),
-    // changeTransPln: changePln => dispatch(actions.changeTransPln(changePln))
-
 
 });
 
-export default connect(null, mapDispatchToProps)(CurrencyConverter);
+const mapStateToProps = state => ({
+    transactions: state.transactions,
+    plnValue: state.plnValue
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CurrencyConverter);

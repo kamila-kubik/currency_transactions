@@ -1,0 +1,19 @@
+.max_trans {
+    margin-top: 2rem;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.5);
+    padding: 1rem;
+}
+.max_trans span {
+    display: block;
+    margin-top: .5rem;
+}
+
+
+.max_trans p:first-child {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}

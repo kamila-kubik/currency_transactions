@@ -1,42 +1,29 @@
 import React from "react";
 import {connect} from "react-redux";
+import "../style/maxTrans.css"
 
 const ShowMaxTrans = ({transactions}) => {
-    const state = transactions;
 
     const maxTrans = (trans) =>{
         const sortTrans = trans.sort((a,b) => {
-            return b.euro - a.euro
+            return b.pln - a.pln
         });
         const max = sortTrans[0];
         return max;
     };
 
-
-
-    if (state.length > 0){
-        const max = maxTrans(transactions);
-        return (
-            <div>
-                <p>Największa transakcja</p>
-                <p>
-                    <span>Nazwa transakcji: {max.name}, </span>
-                    <span>euro: {parseFloat(max.euro).toFixed(2)}, </span>
-                    <span>pln: {parseFloat(max.pln).toFixed(2)}.</span>
-                </p>
-
-            </div>
+    const max = maxTrans(transactions);
+    return (
+        <div className="max_trans">
+            <p>Transakcja o najwyższej wartości</p>
+            <p>
+                <span>Nazwa transakcji: {max.name}</span>
+                <span>Kwota w EURO: {parseFloat(max.euro).toFixed(2)}</span>
+                <span>Kwota w PLN: {parseFloat(max.pln).toFixed(2)}</span>
+            </p>
+        </div>
 
         )
-    }
-
-    return (
-        <div>
-            <p>Brak transakcji</p>
-        </div>
-    )
-
-
 
 };
 

@@ -1,0 +1,58 @@
+.add_trans {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 280px;
+    margin: 0 auto 4rem auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.5);
+
+}
+
+.add_trans p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.trans_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trans_form label,
+.trans_form button {
+    margin-top: 1rem;
+}
+
+.trans_form input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 1rem;
+}
+
+#trans_value {
+    width: 5rem;
+}
+.trans_form input:focus {
+    background-color: navajowhite;
+}
+#submit {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    background-color: green;
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+
+}
+
+
