@@ -20,9 +20,15 @@ const addId = number => ({
   number,
 });
 
+const updateTrans = value => ({
+  type: types.UPDATE_TRANS,
+  value,
+});
+
 export default {
   add,
   remove,
   getPlnValue,
   addId,
+  updateTrans,
 };

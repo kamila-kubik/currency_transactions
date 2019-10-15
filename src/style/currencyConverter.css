@@ -1,9 +1,26 @@
-#euro {
+#converter #pln {
   width: 5rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
+#converter p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#converter {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  height: 120px;
+  margin: 4.5rem 2rem 4rem 0;
+}
+
+#converter input:focus {
+  background-color: lightgoldenrodyellow;
+}
 #converter input {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid black;
 }
