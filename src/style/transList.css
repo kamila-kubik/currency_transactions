@@ -1,35 +1,45 @@
-.nav_list, .trans_sum, .flex {
-    display: flex;
-
-}
-
 .flex {
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+.nav_list {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  font-weight: bold;
+  text-align: center;
 }
 
-.lp {
-    width: 2rem;
-    border: 1px solid black;
-
-}
-.trans_name {
-    width: 15rem;
-    border: 1px solid black;
-}
-.euro, .pln {
-    width: 7rem;
-    border: 1px solid black;
-}
+.lp,
+.trans_name,
+.euro,
+.pln,
 .delete {
-    width: 5rem;
-    border: 1px solid black;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
 }
 
-.sum {
-    width: 17rem;
-    border: 1px solid black;
+.odd {
+  background-color: lightgreen;
 }
-.trans_list{
-    margin-right: 2rem;
-    
+.even {
+}
+
+.euro,
+.pln {
+  text-align: right;
+}
+.lp {
+  text-align: center;
+}
+
+.trans_list {
+  margin-right: 2rem;
+}
+
+.trans_list p:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
 }

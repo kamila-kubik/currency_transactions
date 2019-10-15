@@ -1,0 +1,19 @@
+.trans_sum {
+  display: grid;
+  grid-template-columns: 2.5fr repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.sum {
+  padding: 0.5rem;
+  text-align: right;
+  font-weight: bold;
+}
+#sum_euro,
+#sum_pln,
+#sum_delete {
+  border-bottom: none;
+  font-weight: bold;
+}

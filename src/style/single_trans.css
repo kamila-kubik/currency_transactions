@@ -1,3 +1,13 @@
 .single_trans {
-    display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.delBtn {
+  font-size: 1rem;
+  color: red;
+  cursor: pointer;
 }
