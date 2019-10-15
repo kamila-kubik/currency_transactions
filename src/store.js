@@ -1,7 +1,10 @@
-import {createStore} from "redux";
-import {composeWithDevTools} from "redux-devtools-extension";
-import transReducer from "./app/reducers";
+import { createStore, combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import transReducer from './app/reducers';
 
-const store = createStore(transReducer, composeWithDevTools());
+const rootReducer = combineReducers({ transReducer, form: formReducer });
+
+const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;

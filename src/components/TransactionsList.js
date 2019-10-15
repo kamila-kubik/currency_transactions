@@ -1,11 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import SingleTransaction from './SingleTransaction';
-import { connect } from 'react-redux';
 import SumOfTransactions from './SumOfTransactions';
 import '../style/transList.css';
 import ShowMaxTrans from './ShowMaxTrans';
 
-const TransactionsList = ({ transactions }) => {
+const TransactionsList = () => {
+  const transactions = useSelector(state => state.transReducer.transactions);
+
   if (transactions.length > 0) {
     return (
       <div className="flex">
@@ -36,8 +38,4 @@ const TransactionsList = ({ transactions }) => {
   return null;
 };
 
-const mapStateToProps = state => ({
-  transactions: state.transactions,
-});
-
-export default connect(mapStateToProps)(TransactionsList);
+export default TransactionsList;
