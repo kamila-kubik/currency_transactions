@@ -1,13 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import actions from '../app/actions';
 import '../style/currencyConverter.css';
 
-const CurrencyConverter = ({ getPlnValue, transactions, plnValue, changeTransPln }) => {
+const CurrencyConverter = () => {
   const value = React.createRef();
+  const disptach = useDispatch();
 
   const handleChangePlnValue = e => {
-    getPlnValue(parseFloat(value.current.value));
+    disptach(actions.getPlnValue(parseFloat(value.current.value)));
   };
 
   return (
@@ -29,16 +30,4 @@ const CurrencyConverter = ({ getPlnValue, transactions, plnValue, changeTransPln
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  getPlnValue: plnValue => dispatch(actions.getPlnValue(plnValue)),
-});
-
-const mapStateToProps = state => ({
-  transactions: state.transactions,
-  plnValue: state.plnValue,
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(CurrencyConverter);
+export default CurrencyConverter;
