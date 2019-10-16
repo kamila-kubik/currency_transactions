@@ -21,5 +21,5 @@ See you next time!
 ```javascript
 	const author = "Kamila Kubik";
 	const position = "junior frontend developer";
-	alert('${author} - ${position}, 16/10/2019');
+	alert(`${author} - ${position}, 16/10/2019`);
 ```
