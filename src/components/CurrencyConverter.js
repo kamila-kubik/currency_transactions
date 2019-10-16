@@ -13,14 +13,18 @@ const CurrencyConverter = () => {
     let valuOfpln;
     if (value.current.value === '' || value.current.value < 0) {
       valuOfpln = '0.00';
+      disptach(actions.error());
     } else {
       valuOfpln = value.current.value;
+      disptach(actions.remove_error());
     }
     disptach(actions.getPlnValue(valuOfpln));
     if (transactions.length > 0) {
       disptach(actions.updateTrans(valuOfpln));
     }
   };
+
+  const error = useSelector(state => state.transReducer.error);
 
   return (
     <div id="converter">
@@ -32,12 +36,13 @@ const CurrencyConverter = () => {
           type="number"
           placeholder="0,0000"
           onChange={handleChangePlnValue}
-          ref={value}
           step="0.0001"
           min={0}
+          ref={value}
         />
         <span>PLN</span>
       </label>
+      {error && <span className="error">To pole nie może być mniejsze od 0</span>}
     </div>
   );
 };

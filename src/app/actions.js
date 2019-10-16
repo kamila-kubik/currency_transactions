@@ -25,10 +25,19 @@ const updateTrans = value => ({
   value,
 });
 
+const error = () => ({
+  type: types.ERROR,
+});
+
+const remove_error = () => ({
+  type: types.REMOVE_ERROR,
+});
 export default {
   add,
   remove,
   getPlnValue,
   addId,
   updateTrans,
+  error,
+  remove_error,
 };
