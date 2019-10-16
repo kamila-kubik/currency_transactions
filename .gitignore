@@ -24,3 +24,9 @@ yarn-error.log*
 
 .idea/
 
+/src/components/*.rej
+/src/components/SumOfTransactions.js.rej
+/src/components/TransactionsList.js.rej
+/src/style/addTrans.css.rej
+/src/style/*.rej
+/src/style/*.rej
