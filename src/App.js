@@ -5,12 +5,11 @@ import CurrencyConverter from './components/CurrencyConverter';
 
 const App = () => {
   return (
-    <div className="app">
+    <div>
       <div className="flex">
         <CurrencyConverter />
         <AddTransaction />
       </div>
-
       <TransactionsList />
     </div>
   );
