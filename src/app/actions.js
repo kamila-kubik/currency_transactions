@@ -25,6 +25,21 @@ const updateTrans = value => ({
   value,
 });
 
+const updateEuro = value => ({
+  type: types.UPDATE_EURO,
+  value,
+});
+
+const updatePln = value => ({
+  type: types.UPDATE_PLN,
+  value,
+});
+
+const updateTransName = value => ({
+  type: types.UPDATE_TRANS_NAME,
+  value,
+});
+
 const error = () => ({
   type: types.ERROR,
 });
@@ -40,4 +55,7 @@ export default {
   updateTrans,
   error,
   remove_error,
+  updateTransName,
+  updateEuro,
+  updatePln,
 };

@@ -5,6 +5,9 @@ const ADD_ID = 'ADD_ID';
 const UPDATE_TRANS = 'UPDATE_TRANS';
 const ERROR = 'ERROR';
 const REMOVE_ERROR = 'REMOVE ERROR';
+const UPDATE_EURO = 'UPDATE_EURO';
+const UPDATE_PLN = 'UPDATE_PLN';
+const UPDATE_TRANS_NAME = 'UPDATE_TRANS_NAME';
 
 export default {
   ADD_TRANS,
@@ -14,4 +17,7 @@ export default {
   UPDATE_TRANS,
   ERROR,
   REMOVE_ERROR,
+  UPDATE_TRANS_NAME,
+  UPDATE_PLN,
+  UPDATE_EURO,
 };

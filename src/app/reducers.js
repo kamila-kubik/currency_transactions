@@ -2,7 +2,9 @@ import types from './types';
 
 const INITIAL_STATE = {
   idNumber: 1,
-  plnValue: '0,0000',
+  euro: '4.5000',
+  pln: '0.00',
+  nameOfTrans: '',
   error: false,
   transactions: [],
 };
@@ -48,6 +50,21 @@ const transReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         transactions: copy,
+      };
+    case types.UPDATE_EURO:
+      return {
+        ...state,
+        euro: action.value,
+      };
+    case types.UPDATE_PLN:
+      return {
+        ...state,
+        pln: action.value,
+      };
+    case types.UPDATE_TRANS_NAME:
+      return {
+        ...state,
+        nameOfTrans: action.value,
       };
     default:
       return state;
